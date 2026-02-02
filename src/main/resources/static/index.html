@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Full Stack Demo</title>
+</head>
+<body>
+<h1>Java Full Stack App</h1>
+<button onclick="callBackend()">Call Backend</button>
+<p id="result"></p>
+
+<script>
+function callBackend() {
+    fetch('/api/hello')
+        .then(res => res.text())
+        .then(data => document.getElementById('result').innerText = data);
+}
+</script>
+</body>
+</html>
